@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const config = require('./config');
 const cc = require('./utils/cc');
-const kraken = require('./kraken');
+const kraken = require('./exchanges/kraken');
 
 const balance = null;
 const doStuff = () => {
@@ -24,13 +24,15 @@ const doStuff = () => {
                                 console.log(`I am going to sell ${assetData.symbol} for ${price.EUR}. Amount is ${amount}`);
                                 if(assetData.symbol === 'BTC') {
                                     assetData.symbol = 'XBT';
-                                }       
-                                kraken.placeOrder(`${assetData.symbol}EUR`, 'sell', 'market', price.EUR, amount).then((data) => {
-                                    if(data.descr) {
-                                        console.log(`Order placed: ${data.descr}`);
-                                    }
-                                })
-                                .catch(error => console.log(error));        
+                                }     
+                                if(process.env.Environment === 'production') {
+                                    kraken.placeOrder(`${assetData.symbol}EUR`, 'sell', 'market', price.EUR, amount).then((data) => {
+                                        if(data.descr) {
+                                            console.log(`Order placed: ${data.descr}`);
+                                        }
+                                    })
+                                    .catch(error => console.log(error));   
+                                }     
                             }
                         })
                         .catch(error => console.log(error));

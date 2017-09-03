@@ -1,4 +1,0 @@
-- config file - list with currencies and targets
-- get prices of currencies from list
-- if target (plus X%), get balance from exchange and place sell order
-- repeat every 15 minutes for all currencies from list
