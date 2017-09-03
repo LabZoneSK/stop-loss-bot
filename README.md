@@ -28,12 +28,14 @@ Run the bot
 npm start
 ```
 
-Current code is work in progress. Please, use with caution. Do not connect to
-your Kraken account until you are sure that you know what you are doing. Otherwise you can loose your money!!!
+**Current code is work in progress. Please, use with caution. Do not connect to
+your Kraken account until you are sure that you know what you are doing. Otherwise you can loose your money!!!**
 
 If you want to contribute or you have any ideas or questions, do not hesitate to contact me.
 
-Twitter: @starosta83
+Twitter: [@starosta83](https://twitter.com/starosta83)
+
+Email: martin.starosta83@gmail.com
 
 I will be very happy if this bot helps you to loss your money and provide you "safety net" in times when cryptocurrency
 market crashes.
