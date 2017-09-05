@@ -27,7 +27,7 @@ const config = {
     {
       "symbol": "ETC",
       "kraken": "XETC",
-      "target": 13,
+      "target": 20,
     },
     {
       "symbol": "BCH",
