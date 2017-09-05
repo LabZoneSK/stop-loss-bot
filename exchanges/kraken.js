@@ -1,6 +1,8 @@
 const KrakenClient = require('kraken-api');
 
-const kraken = new KrakenClient(process.env.APIKey, process.env.APISign);
+const kraken = new KrakenClient(process.env.APIKey, process.env.APISign, {
+  timeout: process.env.Timeout || 50000,
+});
 
 const getBalance = () => {
   return new Promise((resolve, reject) => {

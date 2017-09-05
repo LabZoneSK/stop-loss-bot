@@ -1,51 +1,50 @@
 const config = {
-    "assets": [
-        /*{
-            "symbol": "LTC",
-            "kraken": "XLTC",
-            "target": 65,
-        },*/
-        {
-            "symbol": "BTC",
-            "kraken": "XXBT",
-            "target": 3800,
-        },
-        /*{
-            "symbol": "DASH",
-            "kraken": "DASH",
-            "target": 305,
-        },
-        {
-            "symbol": "XRP",
-            "kraken": "XXRP",
-            "target": 0.19,
-        },
-        {
-            "symbol": "ETH",
-            "kraken": "XETH",
-            "target": 290,
-        },*/
-        {
-            "symbol": "ETC",
-            "kraken": "XETC",
-            "target": 16,
-        },
-        /*{
-            "symbol": "BCH",
-            "kraken": "BCH",
-            "target": 515,
-        },
-        {
-            "symbol": "XMR",
-            "kraken": "XXMR",
-            "target": 110,
-        },
-        {
-            "symbol": "ZEC",
-            "kraken": "XZEC",
-            "target": 230,
-        }*/
-    ]
+  "assets": [{
+      "symbol": "LTC",
+      "kraken": "XLTC",
+      "target": 50,
+    },
+    {
+      "symbol": "BTC",
+      "kraken": "XXBT",
+      "target": 3600,
+    },
+    {
+      "symbol": "DASH",
+      "kraken": "DASH",
+      "target": 0,
+    },
+    {
+      "symbol": "XRP",
+      "kraken": "XXRP",
+      "target": 0.14,
+    },
+    {
+      "symbol": "ETH",
+      "kraken": "XETH",
+      "target": 200,
+    },
+    {
+      "symbol": "ETC",
+      "kraken": "XETC",
+      "target": 13,
+    },
+    {
+      "symbol": "BCH",
+      "kraken": "BCH",
+      "target": 0,
+    },
+    {
+      "symbol": "XMR",
+      "kraken": "XXMR",
+      "target": 75,
+    },
+    {
+      "symbol": "ZEC",
+      "kraken": "XZEC",
+      "target": 0,
+    }
+  ]
 };
 
 module.exports = config;
