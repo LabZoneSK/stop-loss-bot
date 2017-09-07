@@ -2,8 +2,10 @@
 require('dotenv').config();
 
 const stopLossBot = require('./bot/stop-loss');
+const config = require('./config');
 
-
-const tick = 1000 * 60 * parseInt(process.env.Tick) || 1000 * 60 * 5;
-setInterval(stopLossBot.run, tick);
-stopLossBot.run();
+if (config.stoploss.enabled === true) {
+  const tick = 1000 * 60 * parseInt(process.env.Tick) || 1000 * 60 * 5;
+  setInterval(stopLossBot.run, tick);
+  stopLossBot.run();
+}

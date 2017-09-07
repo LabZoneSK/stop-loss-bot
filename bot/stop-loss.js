@@ -58,7 +58,7 @@ const sell = (amount, symbol, price) => {
 };
 
 const run = () => {
-  config.assets.map((asset) => {
+  config.stoploss.assets.map((asset) => {
     const assetData = asset;
     cc.getPrice(asset.symbol, 'EUR', 'CCAGG').then((data) => {
         const price = data;
