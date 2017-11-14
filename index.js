@@ -5,7 +5,11 @@ const stopLossBot = require('./bot/stop-loss');
 const config = require('./config');
 
 if (config.stoploss.enabled === true) {
-  const tick = 1000 * 60 * parseInt(process.env.Tick) || 1000 * 60 * 5;
+  let tickConfig = parseInt(process.env.Tick);
+  if (process.env.Environment === 'development') {
+    tickConfig = 1;
+  }
+  const tick = 1000 * 60 * tickConfig || 1000 * 60 * 5;
   setInterval(stopLossBot.run, tick);
   stopLossBot.run();
 }

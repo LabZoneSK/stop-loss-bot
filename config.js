@@ -9,12 +9,13 @@ const config = {
     "assets": [{
         "symbol": "LTC",
         "kraken": "XLTC",
-        "target": 50,
+        "target": 150,
       },
       {
         "symbol": "BTC",
         "kraken": "XXBT",
-        "target": 3600,
+        "target": 4500,
+        "precision": 1,
       },
       {
         "symbol": "DASH",
@@ -24,17 +25,17 @@ const config = {
       {
         "symbol": "XRP",
         "kraken": "XXRP",
-        "target": 0.14,
+        "target": 0,
       },
       {
         "symbol": "ETH",
         "kraken": "XETH",
-        "target": 200,
+        "target": 270,
       },
       {
         "symbol": "ETC",
         "kraken": "XETC",
-        "target": 20,
+        "target": 0,
       },
       {
         "symbol": "BCH",
@@ -44,7 +45,7 @@ const config = {
       {
         "symbol": "XMR",
         "kraken": "XXMR",
-        "target": 75,
+        "target": 0,
       },
       {
         "symbol": "ZEC",

@@ -34,7 +34,7 @@ const sendTargetNotify = (symbol, price, target) => {
   }
 };
 
-const sell = (amount, symbol, price) => {
+const sell = (amount, symbol, price, precision = process.env.DefaultPrecision) => {
   if (amount && parseFloat(amount).toFixed(3) > 0) {
     console.log(`I am going to sell ${symbol} for ${price}. Amount is ${amount}`);
     sendSellNotify(symbol, price, amount);
@@ -44,15 +44,18 @@ const sell = (amount, symbol, price) => {
       symbol = 'XBT';
     }
 
+    //Price precision needs to be fixed based on requirements from Kraken. For example> BTC precision must be 2.
+    const sellPrice = Number(price).toFixed(precision) || price;
+
     if (process.env.Environment === 'production') {
-      kraken.placeOrder(`${symbol}EUR`, 'sell', 'market', price, amount).then((data) => {
+      kraken.placeOrder(`${symbol}EUR`, 'sell', 'market', sellPrice, amount).then((data) => {
           if (data.descr) {
             return data.descr;
           }
         })
         .catch(error => console.log(error));
     } else {
-      console.log(`Selling ${symbol} by market price.`)
+      console.log(`Selling ${symbol} by market price (${sellPrice}).`)
     }
   }
 };
@@ -69,7 +72,7 @@ const run = () => {
             if (balance === null) {
               const balancePromise = kraken.getBalance();
               balancePromise.then((data) => {
-                  sell(data[assetData.kraken], assetData.symbol, price.EUR)
+                  sell(data[assetData.kraken], assetData.symbol, price.EUR, assetData.precision);
                 })
                 .catch(error => console.log(error));
             } else {
