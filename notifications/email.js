@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport(smtpConfig);
 
 const sendEmail = (options) => {
   const mailOptions = Object.assign({}, {
-    from: 'bot@labzone.sk',
+    from: process.env.SMTPUser || '',
   }, options);
 
   transporter.sendMail(mailOptions, (err, info) => {
