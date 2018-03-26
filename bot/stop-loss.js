@@ -66,9 +66,9 @@ const run = () => {
     cc.getPrice(asset.symbol, 'EUR', 'CCAGG').then((data) => {
         const price = data;
         if (price.EUR) {
-          const isBellowTarget = price.EUR < assetData.target;
-          if (isBellowTarget) {
-            console.log(`${assetData.symbol} is bellow target.`);
+          const isBelowTarget = price.EUR < assetData.target;
+          if (isBelowTarget) {
+            console.log(`${assetData.symbol} is below target.`);
             if (balance === null) {
               const balancePromise = kraken.getBalance();
               balancePromise.then((data) => {

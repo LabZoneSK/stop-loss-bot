@@ -6,7 +6,7 @@ It creates "safety net" to prevent you loss more than you want.
 
 The logic is following:
 * Check target price for each currency
-* If current price is bellow target, place sell order
+* If current price is below target, place sell order
 * Order type is market to make sure that order will be sucessful
 * Current logic will sell whole amount of currency
 
