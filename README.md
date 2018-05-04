@@ -10,6 +10,11 @@ The logic is following:
 * Order type is market to make sure that order will be sucessful
 * Current logic will sell whole amount of currency
 
+**IMPORTANT**
+I have created GUI for desktop computer (Windows, Linux, Mac) based on some comments and emails. Repository for 
+this bot with GUI can be found here:
+[Stop-loss bot with GUI](https://github.com/LabZoneSK/stop-loss-bot-GUI)
+
 ## Basic commands
 
 Usage
